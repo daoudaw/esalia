@@ -80,25 +80,43 @@ body
 .menu nav li {
     list-style: none;
     text-transform: uppercase;
-    padding-right: 15px;
+    padding: 15px;
+    transition: .2s ease;
 }
-.menu nav li:not(:last-child) {
+.menu nav a:not(:last-child) {
     list-style: none;
     text-transform: uppercase;
     border-right: 1px solid rgba(0, 0, 0, 0.106);
-    padding-right: 15px;
+   
 }
 
-.menu nav ul{
+.menu nav ul {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+   
 }
 
-.menu nav ul li a {
+
+.menu nav ul a {
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.menu nav ul a:hover {
+    
+    background-color: #3a71a9;
+}
+
+.menu nav ul a li {
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: bold;   
+}
+
+.menu nav ul a li:hover {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 #search_lang {
@@ -109,6 +127,7 @@ body
 .fa-home{
     font-size: 23px !important;
 }
+
 
 .search_input {
     display: none;
