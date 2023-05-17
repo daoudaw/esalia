@@ -76,6 +76,7 @@ body
     display: flex;
     justify-content: space-between;
     margin-bottom: 5rem;
+    align-items: center;
 }
 .menu nav li {
     list-style: none;
@@ -87,13 +88,13 @@ body
     list-style: none;
     text-transform: uppercase;
     border-right: 1px solid rgba(0, 0, 0, 0.106);
+    border-right-h
    
 }
 
 .menu nav ul {
     display: flex;
     flex-direction: row;
-   
 }
 
 
@@ -103,12 +104,10 @@ body
 }
 
 .menu nav ul a:hover {
-    
     background-color: #3a71a9;
 }
 
 .menu nav ul a li {
-    text-decoration: none;
     color: black;
     font-weight: bold;   
 }
@@ -119,9 +118,28 @@ body
     cursor: pointer;
 }
 
-#search_lang {
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.search_lang {
+    gap: 10px;
+    display: flex;
+}
+
+.search_lang li {
+    list-style: none;
+   }
+
+.search_lang li a {
     font-weight: normal;
     color: black;
+   }
+
+
+.search_lang li:not(:first-child) {
+    display: none;
 }
 
 .fa-home{
@@ -131,18 +149,40 @@ body
 
 .search_input {
     display: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-right: none;
+    padding: 1.2rem 1rem;
+    transform: translateX(104px); 
+    
+}
+
+.animationSearchButton {
+    animation: fadeSearchInput .5s;
+    /* transform: translateX(-10px); */
 }
 
 .bt_search {
     border: none;
     background-color: transparent;
     margin-left: 10px;
+    z-index: 1;
+}
+
+.bt_search:focus {
+    outline: none;
 }
 
 .fa-search {
     font-size: 23px !important;
 }
 
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
 
 p, ul, li {
     font-weight: normal;
@@ -265,6 +305,17 @@ ul {
 .fa-arrow-circle-up:hover {
     background-color: transparent;
 
+}
+
+@keyframes fadeSearchInput {
+
+    0% {
+        opacity: 0;
+    }
+   
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeBorderBottom {
